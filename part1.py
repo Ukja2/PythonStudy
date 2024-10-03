@@ -80,3 +80,74 @@ print("Also, \"\" represents an empty String.")
 print("Don't forget: use \\\" instead of \" !")
 print("'' is not the same as \"")
 """
+
+#Function(함수)
+#기본구조
+"""
+def main():
+    print("My name is Jaeuk")
+"""
+#함수는 def를 사용해 정의, main은 함수의 이름이며, ()는 함수 호출에 사용된다. 함수 정의 끝에 콜론 ":" 을 붙인다
+#print -> 들여쓰기 된 명령문들 (print)은 함수 안에 포함되는 것이며, 함수가 호출되면 해당 명령어들이 실행된다.
+
+#main() # 함수 호출
+
+#예시
+"""
+def message1():
+    print("This is message1.")
+
+def message2():
+    print("This is message2.")
+    message1()
+    print("Done with message2.")
+
+message1()
+message2()
+print("Done with everything")
+"""
+
+#예시2
+"""
+def main():
+    message1()
+    message2()
+    print("Done with everything.")
+def message1():
+    print("This is message1.")
+def message2():
+    print("This is message2.")
+    message1()
+    print("Done with message2.")
+main()
+"""
+
+#함수로 도형만들기 연습문제 1
+"""
+def top():
+    print("  ______")
+    print(" /      \\")
+    print("/        \\")
+
+def bottom():
+    print("\\        /")
+    print(" \\______/")
+    
+def plusBar():
+    print("+--------+")
+
+def stopBar():
+    print("|  STOP  |")
+
+def main():
+    top()
+    bottom()
+    plusBar()
+    top()
+    stopBar()
+    bottom()
+    top()
+    plusBar()
+
+main()
+"""
