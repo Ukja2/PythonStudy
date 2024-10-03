@@ -169,5 +169,13 @@ me+u: + 기호가 포함되어 있어 사용할 수 없음
 49ers: 숫자로 시작하기 때문에 사용할 수 없음
 side-swipe: - 기호가 포함되어 있어 사용할 수 없음
 
+and del from not while
+as elif global or with
+assert else if pass yield
+break except import print
+class exec in raise
+continue finally is return
+def for lambda try 
+위와 같은 키워드들은 이미 파이썬 내에 존재하기 때문에 사용할 수 없다.
 
 """
