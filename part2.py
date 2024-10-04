@@ -86,5 +86,20 @@ def main():
 2.값은 표현식이 될 수 있다: 변수에 할당되는 값은 단순한 값(예: 숫자, 문자열)일 수도 있지만, 연산 결과나 함수 호출 등의 표현식일 수도 있습니다.
 Ex) x = 2 + 5
 
+변수를 활용한 영수증 프로그램
+
+def main():
+# 다음을 포함한 총 계산 8% 세금 / 15% 팁
+    subtotal = 38 + 40 + 30 # 정수형
+    tax = subtotal * .08 # 실수형
+    tip = subtotal * .15 # 실수형
+    total = subtotal + tax + tip 실수형
+    print("Subtotal:", subtotal)
+    print("Tax:", tax)
+    print("Tip:", tip)
+    print("Total:", total)
+main()
+
 
 """
+
