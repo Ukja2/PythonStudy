@@ -12,8 +12,9 @@ main()
 """   
 """     
 def main():
-    times=5#5.8과 같이 실수형일때는 오류가 발생 for문에서는 정수형만 입력 가능
+    times=5 #5.8과 같이 실수형일때는 오류가 발생 for문에서는 정수형만 입력 가능 
     white_on_board(times)
+
 
 def white_on_board(times):
     for i in range(times):
@@ -37,25 +38,40 @@ main()
 """
 
 """
+A "Parameter Mystery" problem
 def main():
-    line(13)
-    line(7)
-    line(35)
-    box(10,5)
-    box(5,4)
+    x = 5;
+    y = 9;
+    z = 2;
 
-def line(num):
-    print("*" * num)
+ mystery(z, y, x) 처음에  2, 9, 5
+ mystery(y, x, z) 9 5 2 
 
-def box(x, y):
-    #top
-    print("*" * x)
-    #middle
-    print("*", end="")
-    print(" " * (x-2) , end="")
-    print("*")
-    #bottom
-    print("*" * x)
+def mystery(x, y, z): 5
+ print(z, y, x)   
 
 main()
 """
+
+#다른 함수에 있는 지역변수를 매개변수로 받는 예시1
+#지역변수가 존재하는 함수 내에 전달받고싶은 함수를 호출해서 인자를 전달할 수 있다.
+"""
+def main():
+    a = 10
+    example(a)
+
+def example(x):
+    print(x)
+"""
+#다른 함수에 있는 지역변수를 매개변수로 받는 예시2
+#변수를 지니고 있는 함수를 호출한 뒤 반한된 값을 어떠한 변수에 저장 후 그 값을 매개변수로 전달하는 방법
+def main():
+    a = 10
+    return a
+
+def example(x):
+    print(x)
+
+
+b = main()
+example(b)

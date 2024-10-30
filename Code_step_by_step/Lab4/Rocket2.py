@@ -1,3 +1,4 @@
+SIZE = 3
 def line():
     print("+", end = "")
     for i in range(SIZE * 2):
