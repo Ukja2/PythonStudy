@@ -20,6 +20,7 @@ round(3.1415, 2) → 3.14
 """
 
 """
+121의 제곱근
 def main():
     x = math.sqrt(121)
     print("X = ", x)
@@ -104,12 +105,6 @@ def displacement(v0, a, t):
     d = v0 * t + 0.5 * a * (t**2)
     return d
 """
-def main():
-    result  = displacement(0, 20, 2)
-    print(result)
-    
-def displacement(v0, a, t):
-    d = v0 * t + 0.5 * a * (t**2)
-    return d
+a=random.randint(1,10)
 
-main()
+print(a * 10)
