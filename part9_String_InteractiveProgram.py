@@ -123,3 +123,147 @@ print(empty_count)  # 0
 
 """
 
+# --- 11 01 수업
+
+"""
+문자열을 반복문으로 순회
+
+입력값:
+major = "CS"
+for letter in range(0, len(major)):
+    print(major[letter])
+
+여기서 range(0, len(major))는 range(0, 2)로 해석된다.. len(major)는 문자열 "CS"의 길이인 2를 반환
+
+출력값:
+C
+S
+"""
+
+"""
+이름을 입력받고, 입력된 이름의 각 문자를 왼쪽으로 정렬된 패턴으로 출력하는 프로그램을 출력하시오
+
+출력예시:
+ELON
+LON
+ON
+N
+E
+EL
+ELO
+ELON
+MUSK
+USK
+SK
+K
+M
+MU
+MUS
+MUSK
+"""
+
+"""
+def main():
+      name = input("이름을 입력하시오:" )
+      pattern(name)
+
+
+def pattern(name):
+      whitespace = name.find(" ") #공백의 위치를 인덱스로 변환 " " -> 4
+      first_name = name[:whitespace] # 공백의 위치를 기준으로 이전까지의 문자열을 할당 :4 -> elon 슬라이싱 구문에서 끝 인덱스는 미포함
+      last_name = name[whitespace + 1:] # 공백의 위치를 기준으로 이후의 문자열을 할당 5: -> musk / + 1을 하는 이유는 4를 기준으로 하면 공백부터 시작되기 때문
+      roop(first_name)
+      roop(last_name)
+
+def roop(name): # ex) elon
+      name = name.upper() #입력받은 문자열을 항상 대문자로 변환
+      for i in range(len(name)): #elon = 4번 반복
+            print(name[i:]) #인덱스 0부터 3까지 출력
+      for i in range(1, len(name) +1): #4번 반복/ 1부터 시작
+            print(name[:i]) #슬라이싱 구문에서 시작 인덱스 생략시 0부터 시작 ex) 0:1 은 1은 미포함이기 때문에 0 출력 
+
+main()
+"""
+
+"""
+문자열 테스트
+str.startswith(string): 이 메서드는 문자열이 주어진 문자열로 시작하는지를 확인
+
+print("hello".startswith("he"))  # True
+print("hello".startswith("lo"))  # False
+
+
+str.endswith(string): 이 메서드는 문자열이 주어진 문자열로 끝나는지를 확인
+
+print("hello".endswith("lo"))  # True
+print("hello".endswith("he"))  # False
+
+"""
+
+"""
+1. 문자열과 정수의 사이의 관계
+문자를 숫자로 표현하는 표준으로 ASCII 값이라 칭한다. Python의 문자열은 내부적으로 각 문자를 숫자로 표현하는데 이를 ASCII값을 통해 수행함
+
+예를 들어
+'A'는 65
+'B'는 66
+공백(' ')은 32
+소문자 'a'는 97
+소문자 'b'는 98
+특수 문자 '*'는 42
+
+2. 문자와 정수의 변환
+Python에서는 한 글자 문자열과 정수 간에 변환이 가능하다.
+
+ord() 함수는 주어진 문자의 ASCII 값을 반환합니다.
+chr() 함수는 주어진 ASCII 값을 문자로 변환합니다.
+
+예를 들어
+ord('a')는 97을 반환
+chr(103)은 'g'를 반환
+
+3. 유용한 조작
+이 변환 기능을 사용하여 문자에 대해 수학적 연산을 수행할 수 있다. 
+
+예를 들어:
+chr(ord('a') + 2)는 ord('a')가 97이므로, 97에 2를 더한 99에 해당하는 문자인 'c'를 반환
+"""
+
+
+
+#Interactive Program
+
+"""
+인터랙티브 프로그램이란?
+인터랙티브 프로그램은 사용자의 입력을 콘솔에서 읽고, 그에 따라 동작하는 프로그램이다. 이러한 프로그램은 다음과 같은 특성을 가지고 있다.
+
+1. 사용자 입력 처리 (input)
+프로그램이 실행되는 동안 사용자에게 입력을 요청합니다. 예를 들어, 사용자가 텍스트를 입력하거나 선택을 하도록 유도 ex) input 
+
+2.  unpredictable and misbehave (예측 불가능성)
+사용자는 예상치 못한 방식으로 입력할 수 있다. 예를 들어, 프로그램이 숫자를 요구하는데 문자를 입력하거나, 잘못된 형식의 데이터를 제공할 수 있다. ex)예외처리
+
+3. interesting behavior (흥미로운 행동)
+인터랙티브 프로그램은 사용자의 입력에 즉각적으로 반응하므로 더 흥미롭고 동적인 행동을 제공합니다. ex)if/else 등
+
+"""
+
+#Input
+"""
+input() 함수란?
+input() 함수는 Python에서 사용자가 콘솔에서 입력할 수 있도록 하는 함수이다. 이 함수는 사용자로부터 텍스트 입력을 받고, 입력된 내용을 문자열로 반환한다.
+
+예시) name = input("당신의 이름을 입력하세요: ")
+print("안녕하세요,", name)  # 사용자에게 인사하기
+
+잘못된 예시)
+def main():
+      age = input("How old are you? ")
+      years = 65 - age
+      print(years, " years until retirement!")
+
+위의 예시는 input()은 기본적으로 입력한 값을 문자열로 반환하기 때문에 위의 함수 실행 시 정수인 65와 문자열인 age가 연산작업을 수행하기 때문에 오류가 발생한다.
+이를 해결하기 위해서는  input()메서드를 반드시 int로 감싸주어 정수형으로 변환시켜 주어야 한다.
+예시) age = int(input("How old are you? "))
+
+"""
