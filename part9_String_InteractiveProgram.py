@@ -162,7 +162,7 @@ MUS
 MUSK
 """
 
-"""
+
 def main():
       name = input("이름을 입력하시오:" )
       pattern(name)
@@ -183,7 +183,7 @@ def roop(name): # ex) elon
             print(name[:i]) #슬라이싱 구문에서 시작 인덱스 생략시 0부터 시작 ex) 0:1 은 1은 미포함이기 때문에 0 출력 
 
 main()
-"""
+
 
 """
 문자열 테스트
