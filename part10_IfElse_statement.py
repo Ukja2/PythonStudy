@@ -177,4 +177,4 @@ def burn_level(BMR):
         return "high"
 
 #실행
-main()
+main()    
