@@ -178,3 +178,41 @@ def burn_level(BMR):
 
 #실행
 main()    
+
+
+
+# Factoring(팩토링): 공통되거나 중복된 코드를 추출해서 한 번만 작성하여 사용하도록 하는 프로그래밍 기법
+
+# 예시
+
+"""
+중복된 코드가 존재
+
+def process_data(data, condition):
+    if condition:
+        print("Processing data...")
+        data = data * 2
+        print("Data processed successfully!")
+    else:
+        print("Processing data...")
+        data = data + 5
+        print("Data processed successfully!")
+    return data
+
+"""
+
+"""
+Factoring을 활용한 중복 코드 처리
+
+def process_data(data, condition):
+    print("Processing data...")
+    
+    if condition:
+        data = data * 2
+    else:
+        data = data + 5
+    
+    print("Data processed successfully!")
+    return data
+
+"""
