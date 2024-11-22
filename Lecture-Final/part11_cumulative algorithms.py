@@ -71,3 +71,67 @@ def results(subtotal):
     print("Total: $" + str(total))
 
 
+# String: 문자열 심화
+"""
+ASCII 값과 문자의 관계
+모든 문자(char)는 컴퓨터 내부적으로 ASCII 값이라는 숫자에 매핑된다.
+
+예: 'A'의 ASCII 값은 65
+    'a'의 ASCII 값은 97 
+    공백 ' '의 ASCII 값은 32
+    별표 '*'의 ASCII 값은 42
+
+    
+1. 문자와 정수 간 변환
+ord() 함수: 문자를 ASCII 값으로 변환한다.
+
+chr() 함수: ASCII 값을 문자로 변환한다.
+
+2. 문자 연산을 위한 활용
+(1) 문자에 숫자 더하기
+chr(ord('a') + 2)  # 결과: 'c'
+- ord('a')는 97이므로 97 + 2 = 99가 되고, chr(99)는 'c'
+
+(2) 문자 반복문에서 활용
+for i in range(5):  # 'a'부터 5개의 문자를 출력
+    print(chr(ord('a') + i), end=" ")  # 결과: a b c d e
+
+    
+3. 범위를 벗어나는 값
+
+(1) ASCII 값은 제한이 있다.(일반적으로 0~127) 잘못된 범위의 값을 입력하면 에러가 발생
+
+예시) print(chr(128))  범위를 벗어난 값
+
+(2) chr와 ord는 문자열 길이가 1인 경우에만 동작
+
+ord('abc')  # 오류: 문자열이 1자 이상이면 작동하지 않음
+
+
+print("AB" < "AC") True
+
+"AB"가 "AC"보다 작은 이유는 문자열의 사전 순서에 따라 비교됨 Python에서는 문자열을 비교할 때 알파벳 순서로 각 문자의 ASCII 값을 비교한다.
+
+1. "AB"와 "AC"의 첫 번째 문자 A와 A를 비교 두 문자가 같으므로 두 번째 문자로 넘어감
+2. 문자로 넘어가면 B와 C를 비교하게 됨 여기서 B의 ASCII 값(66)은 C의 ASCII 값(67)보다 작음
+3. 따라서 전체적으로 "AB"는 "AC"보다 작다고 판단됨
+
+"""
+
+text = "abc xyz"
+key = 1
+text = text.upper()
+
+for letter in text:
+    if letter >= "A" and letter <= "Z":
+        shifted_num = ord(letter) + key
+        if shifted_num > ord('Z'):
+            shifted_num = shifted_num % ord('[') + ord('A')
+    print(chr(shifted_num), end="")
+else:
+    print(chr(shifted_num), end="")
+
+    
+    
+# 92 % 91 + 65 = A부터 다시시작
+# (ord("Z") +1) % ord("[]") + ord("A") = A(65)
