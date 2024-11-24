@@ -127,9 +127,9 @@ for letter in text:
         shifted_num = ord(letter) + key
         if shifted_num > ord('Z'):
             shifted_num = shifted_num % ord('[') + ord('A')
-    print(chr(shifted_num), end="")
-else:
-    print(chr(shifted_num), end="")
+        print(chr(shifted_num), end="")
+    else:
+        print(chr(shifted_num), end="")
 
     
     
