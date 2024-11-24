@@ -1,4 +1,4 @@
-#String(문자열)
+#1주차 String(문자열)
 
 #문자열의 시작과 끝 문자열은 큰따옴표(") 또는 작은따옴표(')로 감싸서 표현
 #print("Hello")
@@ -109,7 +109,7 @@ print("Done with everything")
 
 #예시2
 """
-def main():
+def main(): 
     message1()
     message2()
     print("Done with everything.")
