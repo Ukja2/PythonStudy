@@ -175,33 +175,33 @@ Wrong! The answer was 14
 Wrong! The answer was 32
 You earned 4 total points
 """
-import random
+# import random
 
-correct = 0
-incorrect = 0
+# correct = 0
+# incorrect = 0
 
-while incorrect < 3:
-    question = ""
-    sum = 0
+# while incorrect < 3:
+#     question = ""
+#     sum = 0
 
-    question_number = random.randint(2,5)
+#     question_number = random.randint(2,5)
 
-    for i in range(question_number):
-        number = random.randint(1, 20)
-        sum += number
-        question += str(number)
-        if i < question_number -1:
-            question += " + "
+#     for i in range(question_number):
+#         number = random.randint(1, 20)
+#         sum += number
+#         question += str(number)
+#         if i < question_number -1:
+#             question += " + "
     
-    print(str(question) + "= ?")
-    answer = int(input("정답은 "))    
+#     print(str(question) + "= ?")
+#     answer = int(input("정답은 "))    
 
-    if sum == answer:
-        correct += 1
-    else: 
-        incorrect += 1
-        print("틀렸습니다! 정답은" + str(sum) + "입니다.")
+#     if sum == answer:
+#         correct += 1
+#     else: 
+#         incorrect += 1
+#         print("틀렸습니다! 정답은" + str(sum) + "입니다.")
 
     
 
-print("당신이 맞춘 개수는 " + str(correct) + "개 입니다.")
+# print("당신이 맞춘 개수는 " + str(correct) + "개 입니다.")
