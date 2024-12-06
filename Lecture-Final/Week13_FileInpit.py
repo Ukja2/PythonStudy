@@ -39,7 +39,7 @@ input/kinglear.txt (현재 폴더의 하위 폴더 input에 있는 파일)
 #split 함수
 #split 함수는 문자열을 특정 기준으로 분리하여, 분리된 부분들을 리스트 형태로 반환한다.
 
-# f = open("C:/Users/qwe02/OneDrive/바탕 화면/weather.txt") # relative
+# f = open("Lecture-Final\textfile\weather.txt") # relative
 # contents = f.read()
 # tokens = contents.split() # 공백을 기준으로 배열형태로 저장
 
@@ -73,7 +73,7 @@ input/kinglear.txt (현재 폴더의 하위 폴더 input에 있는 파일)
 
 #Question 2
 #미국과 벨기에 휘발유 평균가격을 출력
-f = open("C:/Users/qwe02/OneDrive/바탕 화면/gasprices.txt")
+f = open("Lecture-Final/textfile/gasprices.txt")
 contents = f.read()
 tokens = contents.split()
 
