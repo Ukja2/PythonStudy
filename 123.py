@@ -12,4 +12,4 @@ for i in num_list:
             sosu += 1
                 
 
-print(sosu)
+print(sosu) 
